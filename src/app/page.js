@@ -1,29 +1,52 @@
 import Image from "next/image";
 import Script from "next/script";
 
+// const schemaData = {
+//   "@context": "https://schema.org",
+//   "@type": "LocalBusiness",
+//   name: "Your Business Name",
+//   image: "https://yourwebsite.com/images/logo.png",
+//   telephone: "+1-800-555-5555",
+//   address: {
+//     "@type": "PostalAddress",
+//     streetAddress: "123 Main Street",
+//     addressLocality: "Your City",
+//     addressRegion: "State",
+//     postalCode: "12345",
+//     addressCountry: "US",
+//   },
+//   url: "https://yourwebsite.com",
+//   sameAs: [
+//     "https://www.facebook.com/yourpage",
+//     "https://www.instagram.com/yourpage",
+//   ],
+// };
+
 const schemaData = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Your Business Name",
-  image: "https://yourwebsite.com/images/logo.png",
-  telephone: "+1-800-555-5555",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "123 Main Street",
-    addressLocality: "Your City",
-    addressRegion: "State",
-    postalCode: "12345",
-    addressCountry: "US",
-  },
-  url: "https://yourwebsite.com",
+  "@type": "Organization",
+  name: "WTiCabs",
+  url: "https://www.wticabs.com/",
+  logo: "https://www.wticabs.com/images/logo.png",
   sameAs: [
-    "https://www.facebook.com/yourpage",
-    "https://www.instagram.com/yourpage",
+    "https://twitter.com/wticabs",
+    "https://www.instagram.com/wti.cabs/",
+    "https://www.youtube.com/@wti_cabs",
+    "https://www.linkedin.com/company/wti-cabs",
+    "https://www.wticabs.com/",
+  ],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "09250057902",
+      contactType: "customer service",
+      email: "info@wticabs.com",
+      areaServed: "IN",
+      availableLanguage: "en",
+    },
   ],
 };
-export const metadata = {
-  title: "Shivani Negi",
-};
+
 
 export default function Home() {
   return (
